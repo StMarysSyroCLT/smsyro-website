@@ -1,10 +1,197 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>My Church</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>St. Mary’s Syro-Malabar Catholic Church • Charlotte</title>
+  <meta name="description" content="St. Mary’s Syro-Malabar Catholic Church in Charlotte, NC. Mass schedule, faith formation, ministries, liturgical resources, and contact info." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Welcome to My Church</h1>
-    <p>Service Time: Sunday 10:00 AM</p>
+<header>
+  <div class="container navbar">
+    <a class="brand" href="index.html">
+      <span class="brand-badge" aria-hidden="true">✝</span>
+      <span class="brand-text">
+        <strong>St. Mary’s Syro-Malabar Catholic Church</strong>
+        <small>Charlotte, North Carolina</small>
+      </span>
+    </a>
+
+    <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+
+    <nav id="nav" class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+
+      <div class="drop">
+        <button type="button" data-drop aria-expanded="false">About ▾</button>
+        <div class="drop-panel" role="menu">
+          <a href="parish-history.html">Parish History</a>
+          <a href="diocese-history.html" onclick="alert('Optional: add this page later'); return false;">Diocese History</a>
+          <a href="syro-malabar-church.html" onclick="alert('Optional: add this page later'); return false;">Syro-Malabar Church</a>
+          <a href="parish-news.html" onclick="alert('Optional: add this page later'); return false;">Parish News</a>
+          <a href="#" onclick="alert('Optional: add “Our Parish Vicar” page later'); return false;">Our Parish Vicar</a>
+        </div>
+      </div>
+
+      <div class="drop">
+        <button type="button" data-drop aria-expanded="false">Liturgy ▾</button>
+        <div class="drop-panel" role="menu">
+          <a href="mass-schedule.html">Mass Schedule</a>
+          <a href="liturgical-books.html">Liturgical Books</a>
+          <a href="sacraments.html">Sacraments</a>
+        </div>
+      </div>
+
+      <a href="faith-formation.html">Faith Formation</a>
+      <a href="ministries.html">Ministries</a>
+      <a href="contact.html">Contact</a>
+
+      <a class="cta" href="my-church.html" onclick="alert('Your current My Church page is empty. You can add content later.'); return false;">My Church</a>
+      <a class="cta" href="https://www.cognitoforms.com/" target="_blank" rel="noreferrer">Online Forms</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge ok">Welcome • Everyone is invited</span>
+        <h1>Worship. Community. Tradition.</h1>
+        <p>
+          Welcome to <strong>St. Mary’s Syro-Malabar Catholic Church</strong> in Charlotte.
+          Find this week’s schedule, faith formation info, ministries, and helpful liturgy resources.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="mass-schedule.html">View Mass Schedule</a>
+          <a class="btn" href="liturgical-books.html">Liturgy & Prayer Books</a>
+          <a class="btn" href="contact.html">Contact & Location</a>
+        </div>
+
+        <p class="small">
+          Address: <strong>715 E Arrowood Rd, Charlotte, NC 28217</strong> •
+          Phone: <a href="tel:+18133182186">813-318-2186</a> •
+          Email: <a href="mailto:vicar@stmarysyroclt.org">vicar@stmarysyroclt.org</a>
+        </p>
+      </div>
+
+      <aside class="card" aria-label="Quick Info">
+        <h3 style="margin:0 0 8px;">Quick Info</h3>
+        <ul class="kv">
+          <li><span>Sunday</span><strong>10:30 AM (Malayalam)</strong></li>
+          <li><span>English Mass</span><strong>1st Sunday</strong></li>
+          <li><span>Weekdays</span><strong>Tue–Fri 7:00 PM</strong></li>
+          <li><span>Saturday</span><strong>10:00 AM</strong></li>
+        </ul>
+        <hr class="sep" />
+        <a class="btn" style="width:100%;" href="https://maps.google.com/?q=715%20E%20Arrowood%20Rd%20Charlotte%20NC%2028217" target="_blank" rel="noreferrer">
+          Open Directions
+        </a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Weekly Schedule</h2>
+        <p>Edit anytime in <code>index.html</code>.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h3 style="margin:0 0 6px;">Tuesday</h3>
+          <p class="muted" style="margin:0;">Holy Qurbana</p>
+          <p style="margin:8px 0 0; font-size:22px;"><strong>7:00 PM</strong></p>
+        </article>
+
+        <article class="card">
+          <h3 style="margin:0 0 6px;">Wednesday</h3>
+          <p class="muted" style="margin:0;">Holy Qurbana + St. Joseph Novena</p>
+          <p style="margin:8px 0 0; font-size:22px;"><strong>7:00 PM</strong></p>
+        </article>
+
+        <article class="card">
+          <h3 style="margin:0 0 6px;">Thursday</h3>
+          <p class="muted" style="margin:0;">Holy Qurbana + St. Jude Novena</p>
+          <p style="margin:8px 0 0; font-size:22px;"><strong>7:00 PM</strong></p>
+        </article>
+      </div>
+
+      <div class="grid" style="margin-top:14px;">
+        <article class="card">
+          <h3 style="margin:0 0 6px;">Friday</h3>
+          <p class="muted" style="margin:0;">Holy Qurbana + Adoration</p>
+          <p style="margin:8px 0 0; font-size:22px;"><strong>7:00 PM</strong></p>
+        </article>
+
+        <article class="card">
+          <h3 style="margin:0 0 6px;">Saturday</h3>
+          <p class="muted" style="margin:0;">Holy Qurbana + Mother Mary Novena</p>
+          <p style="margin:8px 0 0; font-size:22px;"><strong>10:00 AM</strong></p>
+        </article>
+
+        <article class="card">
+          <h3 style="margin:0 0 6px;">Monday</h3>
+          <p class="muted" style="margin:0;">No Holy Qurbana</p>
+          <p style="margin:8px 0 0; font-size:22px;"><strong>—</strong></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Quick Links</h2>
+        <p>Common resources for parish life.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card soft">
+          <h3 style="margin:0 0 6px;">Liturgical Books</h3>
+          <p class="muted" style="margin:0 0 10px;">Malayalam, English, Holy Week, and more.</p>
+          <a class="btn" href="liturgical-books.html">Open</a>
+        </article>
+
+        <article class="card soft">
+          <h3 style="margin:0 0 6px;">Faith Formation (CCD)</h3>
+          <p class="muted" style="margin:0 0 10px;">Pre-K through 12th Grade timing and mission.</p>
+          <a class="btn" href="faith-formation.html">Open</a>
+        </article>
+
+        <article class="card soft">
+          <h3 style="margin:0 0 6px;">Parish On Net</h3>
+          <p class="muted" style="margin:0 0 10px;">Donations / enrollments / parish programs (external).</p>
+          <a class="btn" href="https://stthomas.parishon.net/" target="_blank" rel="noreferrer">Visit</a>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <strong>St. Mary’s Syro-Malabar Catholic Church</strong><br />
+      <span class="small">715 E Arrowood Rd, Charlotte, NC 28217</span>
+    </div>
+    <div class="small">
+      Phone: <a href="tel:+18133182186">813-318-2186</a><br />
+      Email: <a href="mailto:vicar@stmarysyroclt.org">vicar@stmarysyroclt.org</a>
+    </div>
+    <div class="small">
+      <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook</a> •
+      <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">YouTube</a>
+      <br />
+      © <span id="year"></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
