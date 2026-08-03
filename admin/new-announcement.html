@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Admin | Edit Announcement</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js" defer></script>
+    <script src="firebase-config.js?v=6" defer></script>
+    <script src="auth.js?v=6" defer></script>
+    <script src="announcement-data.js?v=2" defer></script>
+    <script src="announcement-edit.js?v=2" defer></script>
+  </head>
+  <body data-requires-auth="true">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">CA</span>
+          <div>
+            <strong>Church Admin</strong>
+            <small>Weekly announcements</small>
+          </div>
+        </div>
+        <nav class="nav">
+          <a class="active" href="new-announcement.html">New Announcement</a>
+        </nav>
+        <a class="ghost-button sign-out" href="index.html" data-sign-out>Sign out</a>
+      </aside>
+
+      <main class="content">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Announcement Tool</p>
+            <h1>New Announcement</h1>
+          </div>
+        </header>
+
+        <form class="stack" action="preview-send.html" data-announcement-form>
+          <section class="card form-card">
+            <div class="card-header">
+              <div>
+                <h2>Google Doc Paste</h2>
+                <p>Paste the full Google Doc schedule and announcement text here.</p>
+              </div>
+            </div>
+            <label>
+              Announcement Text
+              <textarea class="large-textarea" rows="22" placeholder="Paste the weekly Google Doc here." data-announcement-text></textarea>
+            </label>
+          </section>
+          <div class="sticky-actions">
+            <button class="primary-button" type="submit">Preview &amp; Send</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

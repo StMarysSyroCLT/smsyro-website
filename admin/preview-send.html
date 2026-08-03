@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Admin | Preview & Send</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js" defer></script>
+    <script src="firebase-config.js?v=6" defer></script>
+    <script src="auth.js?v=6" defer></script>
+    <script src="announcement-data.js?v=2" defer></script>
+    <script src="gmail-draft-config.js?v=2" defer></script>
+    <script src="announcement-actions.js?v=2" defer></script>
+  </head>
+  <body data-requires-auth="true">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">CA</span>
+          <div>
+            <strong>Church Admin</strong>
+            <small>Weekly announcements</small>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="new-announcement.html">New Announcement</a>
+        </nav>
+        <a class="ghost-button sign-out" href="index.html" data-sign-out>Sign out</a>
+      </aside>
+
+      <main class="content">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Announcement Tool</p>
+            <h1>Preview &amp; Send</h1>
+          </div>
+          <div class="button-row">
+            <a class="secondary-button" href="new-announcement.html">Edit</a>
+          </div>
+        </header>
+
+        <div class="stack">
+          <section class="card">
+            <div class="card-header">
+              <div>
+                <h2 data-announcement-title>Weekly Schedule</h2>
+                <p data-announcement-date></p>
+              </div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-header">
+              <div>
+                <h2>Schedule Image</h2>
+                <p>Preview of the weekly schedule table.</p>
+              </div>
+            </div>
+            <div class="schedule-table-wrap">
+              <table class="schedule-table" data-schedule-table>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Day</th>
+                    <th>Church Services &amp; Activities</th>
+                  </tr>
+                </thead>
+                <tbody data-schedule-body></tbody>
+              </table>
+            </div>
+            <div class="button-row">
+              <a class="primary-button" href="#" data-copy-schedule-png>Copy Schedule PNG</a>
+              <a class="secondary-button" href="#" data-export-pdf>Export PDF</a>
+              <span class="inline-message" data-action-status></span>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-header">
+              <div>
+                <h2>Final Messages</h2>
+              </div>
+            </div>
+            <div class="message-parts">
+              <div class="message-part">
+                <h3>Final Caption</h3>
+                <pre class="message-preview" data-final-caption></pre>
+                <a class="secondary-button" href="#" data-copy-text="caption">Copy Final Caption</a>
+              </div>
+              <div class="message-part">
+                <h3>Final Announcements</h3>
+                <div class="message-preview" data-final-announcements></div>
+                <a class="secondary-button" href="#" data-copy-text="announcements">Copy Final Announcements</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-header">
+              <div>
+                <h2>Email</h2>
+                <p>Prepare an email version for Gmail delivery.</p>
+              </div>
+            </div>
+            <label>
+              Recipients
+              <textarea rows="3" data-email-recipients>vicar@stmarysyroclt.org</textarea>
+            </label>
+            <label>
+              Bcc
+              <textarea rows="3" data-email-bcc></textarea>
+            </label>
+            <label>
+              Subject
+              <input data-email-subject>
+            </label>
+            <label>
+              Email Preview
+              <textarea rows="10" data-email-preview></textarea>
+            </label>
+            <div>
+              <label>HTML Preview</label>
+              <div class="email-preview-html" data-email-html-preview></div>
+            </div>
+            <div class="button-row">
+              <a class="secondary-button" href="#" data-copy-html-email>Copy HTML Email</a>
+              <a class="secondary-button" href="https://mail.google.com/">Open Gmail</a>
+              <a class="primary-button" href="#" data-preview-gmail>Preview in Gmail</a>
+              <span class="inline-message" data-email-status></span>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
