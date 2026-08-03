@@ -145,7 +145,7 @@ async function loadAnnouncementText() {
   }
 
   try {
-    const response = await fetch(`${pathPrefix}announcments-sroll-homepage.txt?v=${Date.now()}`, {
+    const response = await fetch(`${pathPrefix}announcements-scroll-homepage.txt?v=${Date.now()}`, {
       cache: 'no-store'
     });
 
